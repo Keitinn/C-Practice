@@ -6,10 +6,11 @@ using namespace std;
 
 int main()
 {
-	int n;
+	int n,m;
+	
 	do{
 	srand(time(NULL));
-
+	m = 0;
 	int no = rand() % 100;
 	int x;
 
@@ -19,7 +20,7 @@ int main()
 	do{
 		cout << "いくつかな:";
 		cin >> x;
-
+		m++;
 		if (x > no)
 			cout << "もっと小さな数字です\n";
 		else if (x < no)
@@ -28,6 +29,7 @@ int main()
 	while(x != no);
 
 	cout << "正解です" << endl;
+	cout << "正解までに" << m << "手かかりました" << endl;
 	cout << "繰り返す？\n1・・・はい/2・・・いいえ：\n";
 	cin >> n;
 	}
